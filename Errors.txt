@@ -1,0 +1,553 @@
+"C:\Program Files\Java\jdk1.8.0_261\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.2\lib\idea_rt.jar=51773:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.2\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_261\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\rt.jar;C:\Projects\Skillbox\TelegramExperiments\out\production\TelegramExperiments;C:\Projects\Skillbox\TelegramExperiments\lib\Telegram API bridge v2.jar" Loader
+Exception in thread "main" java.lang.UnsupportedClassVersionError: org/javagram/TelegramApiBridge has been compiled by a more recent version of the Java Runtime (class file version 53.0), this version of the Java Runtime only recognizes class file versions up to 52.0
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:468)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at Loader.main(Loader.java:14)
+
+Process finished with exit code 1
+
+
+При Java 9 - местами были ошибки 
+
+"C:\Program Files\Java\jdk-9.0.4\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.2\lib\idea_rt.jar=49744:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.2\bin" -Dfile.encoding=UTF-8 -classpath "C:\Projects\Skillbox\TelegramExperiments\out\production\TelegramExperiments;C:\Projects\Skillbox\TelegramExperiments\lib\Telegram API bridge v2.jar" Loader
+TelegramApi#1001:Phase 0 in 1 ms
+TelegramApi#1001:Phase 1 in 187 ms
+TelegramApi#1001:Timeout Iteration
+TelegramApi#1001:Connection iteration
+TelegramApi#1001:Phase 2 in 7 ms
+TelegramApi#1001:Phase 3 in 15 ms
+api#1001#Downloader:DownloadFileThread iteration
+TelegramApi#1001:Timeout Iteration
+api#1001#Downloader:DownloadFileThread iteration
+api#1001#Uploader:UploadFileThread iteration
+TelegramApi#1001:#1: waitForDc
+TelegramApi#1001:#1: Creating proto for dc
+TelegramApi#1001:#1: Creating key
+api#1001#Uploader:UploadFileThread iteration
+api#1001#Downloader:DownloadFileThread iteration
+api#1001#Uploader:UploadFileThread iteration
+TelegramApi#1001:>> #0: help.getConfig#c4f9186b
+TransportRate:Transport: #1 149.154.167.50:443 #1.0
+TransportRate:tryConnection #1
+TelegramApi#1001:Sender iteration
+api#1001#Uploader:UploadFileThread iteration
+api#1001#Downloader:DownloadFileThread iteration
+java.net.SocketException: Permission denied: connect
+	at java.base/java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.base/java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:400)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:243)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:225)
+	at java.base/java.net.PlainSocketImpl.connect(PlainSocketImpl.java:148)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:402)
+	at java.base/java.net.Socket.connect(Socket.java:591)
+	at org.telegram.mtproto.transport.PlainTcpConnection.<init>(PlainTcpConnection.java:32)
+	at org.telegram.mtproto.pq.Authorizer.doAuth(Authorizer.java:198)
+	at org.telegram.api.engine.TelegramApi$ConnectionThread.waitForDc(TelegramApi.java:842)
+	at org.telegram.api.engine.TelegramApi$ConnectionThread.run(TelegramApi.java:907)
+TransportRate:onConnectionFailure #1
+TransportRate:Transport: #1 149.154.167.50:443 #1.0
+TransportRate:tryConnection #1
+java.net.SocketTimeoutException: connect timed out
+	at java.base/java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.base/java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:400)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:243)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:225)
+	at java.base/java.net.PlainSocketImpl.connect(PlainSocketImpl.java:148)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:402)
+	at java.base/java.net.Socket.connect(Socket.java:591)
+	at org.telegram.mtproto.transport.PlainTcpConnection.<init>(PlainTcpConnection.java:32)
+	at org.telegram.mtproto.pq.Authorizer.doAuth(Authorizer.java:198)
+	at org.telegram.api.engine.TelegramApi$ConnectionThread.waitForDc(TelegramApi.java:842)
+	at org.telegram.api.engine.TelegramApi$ConnectionThread.run(TelegramApi.java:907)
+TransportRate:onConnectionFailure #1
+TransportRate:Transport: #1 149.154.167.50:443 #1.0
+TransportRate:tryConnection #1
+TransportRate:onConnectionSuccess #1
+TransportRate:Transport: #1 149.154.167.50:443 #1.0
+Authorizer:Solved PQ in 98 ms
+TransportRate:Transport: #1 149.154.167.50:443 #1.0
+TransportRate:Transport: #1 149.154.167.50:443 #1.0
+TransportRate:tryConnection #1
+TelegramApi#1001:#MTProto #1002 created in 12415 ms
+TelegramApi#1001:Connection iteration
+TelegramApi#1001:Connection iteration
+TransportRate:tryConnection #1
+TelegramApi#1001:Sender iteration
+MTProto#1001:sendMessage #2 help.getConfig#c4f9186b
+TelegramApi#1001:#> #0 sent to MTProto #1001 with id #2
+TelegramApi#1001:Sender iteration
+TelegramApi#1001:Timeout Iteration
+TelegramApi#1001:Timeout Iteration
+TelegramApi#1001:RPC #0: Timeout (15001 ms)
+TelegramApi#1001:Timeout Iteration
+Exception in thread "main" org.telegram.api.engine.TimeoutException
+	at org.telegram.api.engine.TelegramApi.doRpcCall(TelegramApi.java:327)
+	at org.telegram.api.engine.TelegramApi.doRpcCallNonAuth(TelegramApi.java:391)
+	at org.telegram.api.engine.TelegramApi.doRpcCallNonAuth(TelegramApi.java:383)
+	at org.javagram.TelegramApiBridge.<init>(TelegramApiBridge.java:68)
+	at Loader.main(Loader.java:14)
+TransportRate:tryConnection #1
+Scheduller:Prepare package: help.getConfig#c4f9186b of size 36
+Scheduller:Total size: 36
+Scheduller:Prepare package: ping#7abe77ec of size 12
+Scheduller:Total size: 48
+Scheduller:Prepare package: ping_delay_disconnect#f3427b8c of size 16
+Scheduller:Total size: 64
+MTProto#1001#Scheduller:Iteration: count: 3, confirm:0
+MTProto#1001#Scheduller:Building package
+MTProto#1001#Scheduller:Adding msg_ack: 0
+MTProto#1001#Scheduller:Adding package: #2 help.getConfig#c4f9186b (7011470377700294660, 1)
+MTProto#1001#Scheduller:Adding package: #3 ping#7abe77ec (7011470377700294664, 3)
+MTProto#1001#Scheduller:Adding package: #4 ping_delay_disconnect#f3427b8c (7011470377700294668, 5)
+MTProto#1001#Scheduller:Sending Package (7011470377700294672, 6)
+Scheduller:Prepare package: ping#7abe77ec of size 12
+Scheduller:Total size: 12
+Scheduller:Prepare package: ping_delay_disconnect#f3427b8c of size 16
+Scheduller:Total size: 28
+MTProto#1002#Scheduller:Iteration: count: 2, confirm:0
+MTProto#1002#Scheduller:Building package
+MTProto#1002#Scheduller:Adding msg_ack: 0
+MTProto#1002#Scheduller:Adding package: #5 ping#7abe77ec (7011470377700294680, 1)
+MTProto#1002#Scheduller:Adding package: #6 ping_delay_disconnect#f3427b8c (7011470377700294684, 3)
+MTProto#1002#Scheduller:Sending Package (7011470377700294688, 4)
+Scheduller:Prepare package: ping#7abe77ec of size 12
+Scheduller:Total size: 12
+MTProto#1001#Scheduller:Iteration: count: 1, confirm:0
+MTProto#1001#Scheduller:Building package
+MTProto#1001#Scheduller:Single package: #7 ping#7abe77ec (7011470377700294692, 7)
+MTProto#1001#Transport2:Start reading message: 100
+MTProto#1002#Transport3:Start reading message: 100
+MTProto#1001:Decrypted in 0 ms
+MTProto#1001#BackOff:onSuccess
+MTProto#1001#BackOff:reset
+TransportRate:onConnectionSuccess #1
+TransportRate:Transport: #1 149.154.167.50:443 #1.0
+MTProto#1001:MessageArrived (#2): time: 1632485161
+MTProto#1002:Decrypted in 0 ms
+MTProto#1002#BackOff:onSuccess
+MTProto#1002#BackOff:reset
+TransportRate:onConnectionSuccess #1
+TransportRate:Transport: #1 149.154.167.50:443 #1.0
+MTProto#1002:MessageArrived (#3): time: 1632485161
+MTProto#1001:MessageArrived (#2): seqNo: 0, msgId:7011470380056686593
+MTProto#1002:MessageArrived (#3): seqNo: 0, msgId:7011470380056760321
+MTProto#1001:Salt check timeout
+MTProto#1001:Too fiew actual salts: 0, requesting news
+MTProto#1002:Salt check timeout
+MTProto#1002:Too fiew actual salts: 0, requesting news
+MTProto#1002:MTProtoMessage: bad_server_salt#edab447b
+MTProto#1001:MTProtoMessage: bad_server_salt#edab447b
+MTProto#1002:BadMessage: 48 #7011470377700294688
+MTProto#1002:Reschedule messages because bad_server_salt #7011470377700294688
+MTProto#1002#Scheduller:Resending as new #5
+MTProto#1002#Scheduller:Resending as new #6
+MTProto#1001:BadMessage: 48 #7011470377700294672
+MTProto#1001:Reschedule messages because bad_server_salt #7011470377700294672
+MTProto#1001#Scheduller:Resending as new #2
+MTProto#1001#Scheduller:Resending as new #3
+MTProto#1001#Scheduller:Resending as new #4
+Scheduller:Prepare package: help.getConfig#c4f9186b of size 36
+Scheduller:Total size: 36
+Scheduller:Prepare package: ping#7abe77ec of size 12
+Scheduller:Total size: 48
+Scheduller:Prepare package: ping_delay_disconnect#f3427b8c of size 16
+Scheduller:Total size: 64
+Scheduller:Prepare package: get_future_salts#b921bd04 of size 8
+Scheduller:Total size: 72
+MTProto#1001#Scheduller:Iteration: count: 4, confirm:0
+MTProto#1001#Scheduller:Building package
+MTProto#1001#Scheduller:Adding package: #2 help.getConfig#c4f9186b (7011470377700294696, 9)
+MTProto#1001#Scheduller:Adding package: #3 ping#7abe77ec (7011470377700294700, 11)
+MTProto#1001#Scheduller:Adding package: #4 ping_delay_disconnect#f3427b8c (7011470377700294704, 13)
+MTProto#1001#Scheduller:Adding package: #8 get_future_salts#b921bd04 (7011470377700294708, 15)
+MTProto#1001#Scheduller:Sending Package (7011470377700294712, 16)
+MTProto#1001#Transport4:Start reading message: 100
+MTProto#1001:Decrypted in 0 ms
+MTProto#1001#BackOff:onSuccess
+MTProto#1001#BackOff:reset
+TransportRate:onConnectionSuccess #1
+TransportRate:Transport: #1 149.154.167.50:443 #1.0
+MTProto#1001:MessageArrived (#4): time: 1632485161
+MTProto#1001:MessageArrived (#4): seqNo: 0, msgId:7011470380454096897
+MTProto#1001:MTProtoMessage: bad_server_salt#edab447b
+MTProto#1001:BadMessage: 48 #7011470377700294692
+MTProto#1001:Reschedule messages because bad_server_salt #7011470377700294692
+MTProto#1001#Scheduller:Resending as new #7
+Scheduller:Prepare package: ping#7abe77ec of size 12
+Scheduller:Total size: 12
+MTProto#1001#Scheduller:Iteration: count: 1, confirm:0
+MTProto#1001#Scheduller:Building package
+MTProto#1001#Scheduller:Single package: #7 ping#7abe77ec (7011470377700294716, 17)
+Scheduller:Prepare package: ping#7abe77ec of size 12
+Scheduller:Total size: 12
+Scheduller:Prepare package: ping_delay_disconnect#f3427b8c of size 16
+Scheduller:Total size: 28
+Scheduller:Prepare package: get_future_salts#b921bd04 of size 8
+Scheduller:Total size: 36
+MTProto#1002#Scheduller:Iteration: count: 3, confirm:0
+MTProto#1002#Scheduller:Building package
+MTProto#1002#Scheduller:Adding package: #5 ping#7abe77ec (7011470377700294720, 5)
+MTProto#1002#Scheduller:Adding package: #6 ping_delay_disconnect#f3427b8c (7011470377700294724, 7)
+MTProto#1002#Scheduller:Adding package: #9 get_future_salts#b921bd04 (7011470377700294728, 9)
+MTProto#1002#Scheduller:Sending Package (7011470377700294732, 10)
+MTProto#1001#Transport4:Start reading message: 164
+MTProto#1002#Transport3:Start reading message: 196
+MTProto#1001:Decrypted in 0 ms
+MTProto#1002:Decrypted in 0 ms
+MTProto#1001:MessageArrived (#4): time: 1632485161
+MTProto#1001:MessageArrived (#4): seqNo: 2, msgId:7011470380916211713
+MTProto#1002:MessageArrived (#3): time: 1632485161
+MTProto#1002:MessageArrived (#3): seqNo: 2, msgId:7011470380919478273
+MTProto#1002:MTProtoMessage: new_session_created#9ec20908
+TelegramApi#1001:mtproto#1002: onSessionCreated
+MTProto#1002#Transport3:Start reading message: 1124
+MTProto#1002:MTProtoMessage: pong#347773c5
+MTProto#1002:Decrypted in 0 ms
+MTProto#1002:pong: -1804109424324134905
+MTProto#1002#Scheduller:Forgetting message: #5
+MTProto#1002:MTProtoMessage: pong#347773c5
+MTProto#1002:pong: -53093229922753200
+MTProto#1002#Scheduller:Forgetting message: #6
+MTProto#1001#Transport2:Start reading message: 276
+MTProto#1001:Decrypted in 0 ms
+MTProto#1001:MessageArrived (#2): time: 1632485161
+MTProto#1001:MessageArrived (#2): seqNo: 4, msgId:7011470380967883777
+MTProto#1001#Transport2:Start reading message: 1124
+MTProto#1001:MTProtoMessage: new_session_created#9ec20908
+TelegramApi#1001:mtproto#1001: onSessionCreated
+MTProto#1001:MTProtoMessage: pong#347773c5
+MTProto#1001:pong: -4795034206936240266
+MTProto#1001#Scheduller:Forgetting message: #7
+MTProto#1001:Decrypted in 1 ms
+MTProto#1001:MessageArrived (#2): time: 1632485161
+MTProto#1001:MessageArrived (#2): seqNo: 4, msgId:7011470380967876609
+MTProto#1001:Ignoring messages #7011470380916205569
+MTProto#1002:MessageArrived (#3): time: 1632485161
+MTProto#1001:MTProtoMessage: new_session_created#9ec20908
+TelegramApi#1001:mtproto#1001: onSessionCreated
+MTProto#1001:MTProtoMessage: pong#347773c5
+MTProto#1001:pong: -6014931091661824300
+MTProto#1001#Scheduller:Forgetting message: #3
+MTProto#1001:MTProtoMessage: pong#347773c5
+MTProto#1001:pong: 697516602605222458
+MTProto#1001#Scheduller:Forgetting message: #4
+MTProto#1001:MTProtoMessage: msgs_ack#62d6b459
+MTProto#1001#Transport2:Start reading message: 276
+MTProto#1001:Decrypted in 0 ms
+MTProto#1002:MessageArrived (#3): seqNo: 2, msgId:7011470380919472129
+MTProto#1001:MessageArrived (#2): time: 1632485161
+MTProto#1001:MessageArrived (#2): seqNo: 5, msgId:7011470381020721153
+MTProto#1002:MTProtoMessage: future_salts#ae500895
+MTProto#1002#Scheduller:Forgetting message: #9
+MTProto#1001:msgs_ack: 7011470377700294696
+MTProto#1001:MTProtoMessage: future_salts#ae500895
+MTProto#1001#Scheduller:Forgetting message: #8
+MTProto#1001:MTProtoMessage: rpc_result#f35c6d01
+MTProto#1001:rpc_result: 7011470377700294696
+MTProto#1001:rpc_result: 7011470377700294696 #2e54dd74
+MTProto#1001#Scheduller:Forgetting message: #2
+java.io.IOException
+	at org.telegram.mtproto.transport.TcpContext.readInt(TcpContext.java:586)
+	at org.telegram.mtproto.transport.TcpContext.access$700(TcpContext.java:21)
+	at org.telegram.mtproto.transport.TcpContext$ReaderThread.run(TcpContext.java:232)
+java.io.IOException
+	at org.telegram.mtproto.transport.TcpContext.readInt(TcpContext.java:586)
+	at org.telegram.mtproto.transport.TcpContext.access$700(TcpContext.java:21)
+	at org.telegram.mtproto.transport.TcpContext$ReaderThread.run(TcpContext.java:232)
+MTProto#1002#Transport3:Breaking context
+MTProto#1002:onChannelBroken (#3)
+MTProto#1002#Transport3:DieThread exit
+TransportRate:tryConnection #1
+MTProto#1001#Transport2:Breaking context
+MTProto#1001:onChannelBroken (#2)
+TransportRate:tryConnection #1
+MTProto#1001#Transport2:DieThread exit
+Scheduller:Prepare package: ping#7abe77ec of size 12
+Scheduller:Total size: 12
+Scheduller:Prepare package: ping_delay_disconnect#f3427b8c of size 16
+Scheduller:Total size: 28
+MTProto#1001#Scheduller:Iteration: count: 2, confirm:3
+MTProto#1001#Scheduller:Building package
+MTProto#1001#Scheduller:Adding msg_ack: 3
+MTProto#1001#Scheduller:Adding package: #10 ping#7abe77ec (7011470377700294740, 19)
+MTProto#1001#Scheduller:Adding package: #12 ping_delay_disconnect#f3427b8c (7011470377700294744, 21)
+MTProto#1001#Scheduller:Sending Package (7011470377700294748, 22)
+Scheduller:Prepare package: ping_delay_disconnect#f3427b8c of size 16
+Scheduller:Total size: 16
+MTProto#1001#Scheduller:Iteration: count: 1, confirm:0
+MTProto#1001#Scheduller:Building package
+MTProto#1001#Scheduller:Single package: #11 ping_delay_disconnect#f3427b8c (7011470377700294752, 23)
+Scheduller:Prepare package: ping#7abe77ec of size 12
+Scheduller:Total size: 12
+Scheduller:Prepare package: ping_delay_disconnect#f3427b8c of size 16
+Scheduller:Total size: 28
+MTProto#1002#Scheduller:Iteration: count: 2, confirm:1
+MTProto#1002#Scheduller:Building package
+MTProto#1002#Scheduller:Adding msg_ack: 1
+MTProto#1002#Scheduller:Adding package: #13 ping#7abe77ec (7011470377700294760, 11)
+MTProto#1002#Scheduller:Adding package: #14 ping_delay_disconnect#f3427b8c (7011470377700294764, 13)
+MTProto#1002#Scheduller:Sending Package (7011470377700294768, 14)
+MTProto#1001#Transport6:Start reading message: 100
+MTProto#1001:Decrypted in 0 ms
+MTProto#1001#BackOff:onSuccess
+MTProto#1001#BackOff:reset
+TransportRate:onConnectionSuccess #1
+TransportRate:Transport: #1 149.154.167.50:443 #1.0
+MTProto#1001:MessageArrived (#6): time: 1632485237
+MTProto#1001:MessageArrived (#6): seqNo: 6, msgId:7011470704379189249
+MTProto#1001:MTProtoMessage: bad_server_salt#edab447b
+MTProto#1001:BadMessage: 48 #7011470377700294748
+MTProto#1001:Reschedule messages because bad_server_salt #7011470377700294748
+MTProto#1001#Scheduller:Resending as new #10
+MTProto#1001#Scheduller:Resending as new #12
+Scheduller:Prepare package: ping#7abe77ec of size 12
+Scheduller:Total size: 12
+Scheduller:Prepare package: ping_delay_disconnect#f3427b8c of size 16
+Scheduller:Total size: 28
+MTProto#1001#Scheduller:Iteration: count: 2, confirm:0
+MTProto#1001#Scheduller:Building package
+MTProto#1001#Scheduller:Adding package: #10 ping#7abe77ec (7011470704117809152, 25)
+MTProto#1001#Scheduller:Adding package: #12 ping_delay_disconnect#f3427b8c (7011470704117809156, 27)
+MTProto#1001#Scheduller:Sending Package (7011470704117809160, 28)
+MTProto#1001#Transport4:Start reading message: 100
+MTProto#1001:Decrypted in 0 ms
+MTProto#1001:MessageArrived (#4): time: 1632485237
+MTProto#1001:MessageArrived (#4): seqNo: 6, msgId:7011470704386370561
+MTProto#1001:MTProtoMessage: bad_server_salt#edab447b
+MTProto#1001:BadMessage: 48 #7011470377700294752
+MTProto#1001:Reschedule messages because bad_server_salt #7011470377700294752
+MTProto#1001#Scheduller:Resending as new #11
+Scheduller:Prepare package: ping_delay_disconnect#f3427b8c of size 16
+Scheduller:Total size: 16
+MTProto#1001#Scheduller:Iteration: count: 1, confirm:0
+MTProto#1001#Scheduller:Building package
+MTProto#1001#Scheduller:Single package: #11 ping_delay_disconnect#f3427b8c (7011470704117809164, 29)
+MTProto#1002#Transport5:Start reading message: 100
+MTProto#1002:Decrypted in 0 ms
+MTProto#1002#BackOff:onSuccess
+MTProto#1002#BackOff:reset
+TransportRate:onConnectionSuccess #1
+TransportRate:Transport: #1 149.154.167.50:443 #1.0
+MTProto#1002:MessageArrived (#5): time: 1632485237
+MTProto#1002:MessageArrived (#5): seqNo: 2, msgId:7011470704416443393
+MTProto#1002:MTProtoMessage: bad_server_salt#edab447b
+MTProto#1002:BadMessage: 48 #7011470377700294768
+MTProto#1002:Reschedule messages because bad_server_salt #7011470377700294768
+MTProto#1002#Scheduller:Resending as new #13
+MTProto#1002#Scheduller:Resending as new #14
+Scheduller:Prepare package: ping#7abe77ec of size 12
+Scheduller:Total size: 12
+Scheduller:Prepare package: ping_delay_disconnect#f3427b8c of size 16
+Scheduller:Total size: 28
+MTProto#1002#Scheduller:Iteration: count: 2, confirm:0
+MTProto#1002#Scheduller:Building package
+MTProto#1002#Scheduller:Adding package: #13 ping#7abe77ec (7011470704117809168, 15)
+MTProto#1002#Scheduller:Adding package: #14 ping_delay_disconnect#f3427b8c (7011470704117809172, 17)
+MTProto#1002#Scheduller:Sending Package (7011470704117809176, 18)
+MTProto#1001#Transport6:Start reading message: 468
+MTProto#1001:Decrypted in 1 ms
+MTProto#1001:MessageArrived (#6): time: 1632485237
+MTProto#1001:MessageArrived (#6): seqNo: 6, msgId:7011470704854585345
+MTProto#1001:Ignoring messages #7011470380916205569
+MTProto#1001:Ignoring messages #7011470380967863297
+MTProto#1001:Ignoring messages #7011470381020721153
+MTProto#1001:MTProtoMessage: pong#347773c5
+MTProto#1001:pong: 9194704088282511704
+MTProto#1001#Scheduller:Forgetting message: #10
+MTProto#1001:MTProtoMessage: pong#347773c5
+MTProto#1001:pong: 5487788725783824507
+MTProto#1001#Scheduller:Forgetting message: #12
+MTProto#1001#Transport4:Start reading message: 100
+MTProto#1002#Transport5:Start reading message: 196
+MTProto#1001:Decrypted in 0 ms
+MTProto#1001:MessageArrived (#4): time: 1632485237
+MTProto#1001:MessageArrived (#4): seqNo: 6, msgId:7011470704885251073
+MTProto#1002:Decrypted in 0 ms
+MTProto#1001:MTProtoMessage: pong#347773c5
+MTProto#1001:pong: 8367292799826569084
+MTProto#1002:MessageArrived (#5): time: 1632485237
+MTProto#1002:MessageArrived (#5): seqNo: 2, msgId:7011470704919327745
+MTProto#1002:Ignoring messages #7011470380919457793
+MTProto#1002:MTProtoMessage: pong#347773c5
+MTProto#1002:pong: 9145215536792715871
+MTProto#1002#Scheduller:Forgetting message: #13
+MTProto#1002:MTProtoMessage: pong#347773c5
+MTProto#1002:pong: 6794719240839557860
+MTProto#1002#Scheduller:Forgetting message: #14
+MTProto#1001#Scheduller:Forgetting message: #11
+java.io.IOException
+	at org.telegram.mtproto.transport.TcpContext.readInt(TcpContext.java:586)
+	at org.telegram.mtproto.transport.TcpContext.access$700(TcpContext.java:21)
+	at org.telegram.mtproto.transport.TcpContext$ReaderThread.run(TcpContext.java:232)
+java.io.IOException
+	at org.telegram.mtproto.transport.TcpContext.readInt(TcpContext.java:586)
+	at org.telegram.mtproto.transport.TcpContext.access$700(TcpContext.java:21)
+	at org.telegram.mtproto.transport.TcpContext$ReaderThread.run(TcpContext.java:232)
+MTProto#1001#Transport6:Breaking context
+MTProto#1001:onChannelBroken (#6)
+MTProto#1001#Transport6:DieThread exit
+TransportRate:tryConnection #1
+MTProto#1001#Transport4:Breaking context
+MTProto#1001:onChannelBroken (#4)
+MTProto#1001#Transport4:DieThread exit
+MTProto#1002#Transport5:Breaking context
+MTProto#1002:onChannelBroken (#5)
+TransportRate:tryConnection #1
+MTProto#1002#Transport5:DieThread exit
+java.io.IOException
+	at org.telegram.mtproto.transport.TcpContext.readInt(TcpContext.java:586)
+	at org.telegram.mtproto.transport.TcpContext.access$700(TcpContext.java:21)
+	at org.telegram.mtproto.transport.TcpContext$ReaderThread.run(TcpContext.java:232)
+TransportRate:tryConnection #1
+Scheduller:Prepare package: ping#7abe77ec of size 12
+Scheduller:Total size: 12
+Scheduller:Prepare package: ping_delay_disconnect#f3427b8c of size 16
+Scheduller:Total size: 28
+MTProto#1001#Scheduller:Iteration: count: 2, confirm:3
+MTProto#1001#Scheduller:Building package
+MTProto#1001#Scheduller:Adding msg_ack: 3
+MTProto#1001#Scheduller:Adding package: #15 ping#7abe77ec (7011471026240356356, 31)
+MTProto#1001#Scheduller:Adding package: #16 ping_delay_disconnect#f3427b8c (7011471026240356360, 33)
+MTProto#1001#Scheduller:Sending Package (7011471026240356364, 34)
+Scheduller:Prepare package: ping#7abe77ec of size 12
+Scheduller:Total size: 12
+Scheduller:Prepare package: ping_delay_disconnect#f3427b8c of size 16
+Scheduller:Total size: 28
+MTProto#1002#Scheduller:Iteration: count: 2, confirm:1
+MTProto#1002#Scheduller:Building package
+MTProto#1002#Scheduller:Adding msg_ack: 1
+MTProto#1002#Scheduller:Adding package: #17 ping#7abe77ec (7011471026240356372, 19)
+MTProto#1002#Scheduller:Adding package: #18 ping_delay_disconnect#f3427b8c (7011471026240356376, 21)
+MTProto#1002#Scheduller:Sending Package (7011471026240356380, 22)
+MTProto#1001#Transport7:Start reading message: 148
+Scheduller:Prepare package: ping#7abe77ec of size 12
+Scheduller:Total size: 12
+MTProto#1001#Scheduller:Iteration: count: 1, confirm:0
+MTProto#1001#Scheduller:Building package
+MTProto#1001#Scheduller:Single package: #19 ping#7abe77ec (7011471026240356384, 35)
+MTProto#1001:Decrypted in 1 ms
+MTProto#1001#BackOff:onSuccess
+MTProto#1001#BackOff:reset
+TransportRate:onConnectionSuccess #1
+TransportRate:Transport: #1 149.154.167.50:443 #1.0
+MTProto#1001:MessageArrived (#7): time: 1632485312
+MTProto#1001:MessageArrived (#7): seqNo: 6, msgId:7011471028008105985
+MTProto#1001:MTProtoMessage: pong#347773c5
+MTProto#1001:pong: 4697635033867978187
+MTProto#1001#Scheduller:Forgetting message: #15
+MTProto#1001:MTProtoMessage: pong#347773c5
+MTProto#1001:pong: -9005394927654577180
+MTProto#1001#Scheduller:Forgetting message: #16
+MTProto#1002#Transport8:Start reading message: 148
+MTProto#1002:Decrypted in 0 ms
+MTProto#1002#BackOff:onSuccess
+MTProto#1002#BackOff:reset
+TransportRate:onConnectionSuccess #1
+TransportRate:Transport: #1 149.154.167.50:443 #1.0
+MTProto#1002:MessageArrived (#8): time: 1632485312
+MTProto#1002:MessageArrived (#8): seqNo: 2, msgId:7011471028082242561
+MTProto#1002:MTProtoMessage: pong#347773c5
+MTProto#1002:pong: 6360282524300032564
+MTProto#1002#Scheduller:Forgetting message: #17
+MTProto#1002:MTProtoMessage: pong#347773c5
+MTProto#1002:pong: 1318713953725701731
+MTProto#1002#Scheduller:Forgetting message: #18
+MTProto#1001#Transport9:Start reading message: 100
+MTProto#1001:Decrypted in 0 ms
+MTProto#1001#BackOff:onSuccess
+MTProto#1001#BackOff:reset
+TransportRate:onConnectionSuccess #1
+TransportRate:Transport: #1 149.154.167.50:443 #1.0
+MTProto#1001:MessageArrived (#9): time: 1632485312
+MTProto#1001:MessageArrived (#9): seqNo: 6, msgId:7011471028477806593
+MTProto#1001:MTProtoMessage: pong#347773c5
+MTProto#1001:pong: -2363614625681998698
+MTProto#1001#Scheduller:Forgetting message: #19
+java.io.IOException
+	at org.telegram.mtproto.transport.TcpContext.readInt(TcpContext.java:586)
+	at org.telegram.mtproto.transport.TcpContext.access$700(TcpContext.java:21)
+	at org.telegram.mtproto.transport.TcpContext$ReaderThread.run(TcpContext.java:232)
+MTProto#1001#Transport7:Breaking context
+MTProto#1001:onChannelBroken (#7)
+MTProto#1001#Transport7:DieThread exit
+TransportRate:tryConnection #1
+java.io.IOException
+	at org.telegram.mtproto.transport.TcpContext.readInt(TcpContext.java:586)
+	at org.telegram.mtproto.transport.TcpContext.access$700(TcpContext.java:21)
+	at org.telegram.mtproto.transport.TcpContext$ReaderThread.run(TcpContext.java:232)
+MTProto#1002#Transport8:Breaking context
+MTProto#1002:onChannelBroken (#8)
+MTProto#1002#Transport8:DieThread exit
+TransportRate:tryConnection #1
+Scheduller:Prepare package: ping#7abe77ec of size 12
+Scheduller:Total size: 12
+Scheduller:Prepare package: ping_delay_disconnect#f3427b8c of size 16
+Scheduller:Total size: 28
+MTProto#1001#Scheduller:Iteration: count: 2, confirm:0
+MTProto#1001#Scheduller:Building package
+MTProto#1001#Scheduller:Adding msg_ack: 0
+MTProto#1001#Scheduller:Adding package: #20 ping#7abe77ec (7011471348362903556, 37)
+MTProto#1001#Scheduller:Adding package: #22 ping_delay_disconnect#f3427b8c (7011471348362903560, 39)
+MTProto#1001#Scheduller:Sending Package (7011471348362903564, 40)
+Scheduller:Prepare package: ping_delay_disconnect#f3427b8c of size 16
+Scheduller:Total size: 16
+MTProto#1001#Scheduller:Iteration: count: 1, confirm:0
+MTProto#1001#Scheduller:Building package
+MTProto#1001#Scheduller:Single package: #21 ping_delay_disconnect#f3427b8c (7011471348362903568, 41)
+Scheduller:Prepare package: ping#7abe77ec of size 12
+Scheduller:Total size: 12
+Scheduller:Prepare package: ping_delay_disconnect#f3427b8c of size 16
+Scheduller:Total size: 28
+MTProto#1002#Scheduller:Iteration: count: 2, confirm:0
+MTProto#1002#Scheduller:Building package
+MTProto#1002#Scheduller:Adding msg_ack: 0
+MTProto#1002#Scheduller:Adding package: #23 ping#7abe77ec (7011471348362903576, 23)
+MTProto#1002#Scheduller:Adding package: #24 ping_delay_disconnect#f3427b8c (7011471348362903580, 25)
+MTProto#1002#Scheduller:Sending Package (7011471348362903584, 26)
+MTProto#1001#Transport9:Start reading message: 100
+MTProto#1001:Decrypted in 0 ms
+MTProto#1001:MessageArrived (#9): time: 1632485387
+MTProto#1001:MessageArrived (#9): seqNo: 6, msgId:7011471351203457025
+MTProto#1001:MTProtoMessage: pong#347773c5
+MTProto#1001:pong: -8742779527240020711
+MTProto#1001#Scheduller:Forgetting message: #21
+MTProto#1001#Transport10:Start reading message: 148
+MTProto#1002#Transport11:Start reading message: 148
+MTProto#1001:Decrypted in 0 ms
+MTProto#1002:Decrypted in 0 ms
+MTProto#1002#BackOff:onSuccess
+MTProto#1002#BackOff:reset
+TransportRate:onConnectionSuccess #1
+TransportRate:Transport: #1 149.154.167.50:443 #1.0
+MTProto#1002:MessageArrived (#11): time: 1632485387
+MTProto#1002:MessageArrived (#11): seqNo: 2, msgId:7011471351241091073
+MTProto#1001#BackOff:onSuccess
+MTProto#1001#BackOff:reset
+TransportRate:onConnectionSuccess #1
+TransportRate:Transport: #1 149.154.167.50:443 #1.0
+MTProto#1001:MessageArrived (#10): time: 1632485387
+MTProto#1001:MessageArrived (#10): seqNo: 6, msgId:7011471351241053185
+MTProto#1002:MTProtoMessage: pong#347773c5
+MTProto#1002:pong: 8901864726161741123
+MTProto#1002#Scheduller:Forgetting message: #23
+MTProto#1001:MTProtoMessage: pong#347773c5
+MTProto#1001:pong: -7772776833175323646
+MTProto#1001#Scheduller:Forgetting message: #20
+MTProto#1002:MTProtoMessage: pong#347773c5
+MTProto#1002:pong: -6461977321132127844
+MTProto#1002#Scheduller:Forgetting message: #24
+MTProto#1001:MTProtoMessage: pong#347773c5
+MTProto#1001:pong: -8128887216261839177
+MTProto#1001#Scheduller:Forgetting message: #22
